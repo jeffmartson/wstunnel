@@ -37,7 +37,7 @@ RUN cargo build --profile=${PROFILE} ${BIN_TARGET}
 
 ############################################################
 # Final image
-FROM debian:bookworm-slim as final-image
+FROM debian:12.5-slim as final-image
 
 RUN useradd -ms /bin/bash app && \
         apt-get update && \
